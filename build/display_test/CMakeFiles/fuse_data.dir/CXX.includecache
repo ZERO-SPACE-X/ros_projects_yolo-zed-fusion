@@ -61,6 +61,10 @@ darknet_ros_msgs/BoundingBox.h
 -
 darknet_ros_msgs/BoundingBoxes.h
 -
+fstream
+-
+iostream
+-
 
 /opt/ros/kinetic/include/message_filters/connection.h
 boost/function.hpp

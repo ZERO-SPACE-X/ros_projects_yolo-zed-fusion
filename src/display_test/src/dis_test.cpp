@@ -35,6 +35,7 @@
  * Subscriber callback
  */
 using namespace std;
+
 void depthCallback(const sensor_msgs::Image::ConstPtr& msg) {
 
     // Get a pointer to the depth values casting the data
@@ -50,6 +51,8 @@ void depthCallback(const sensor_msgs::Image::ConstPtr& msg) {
 
     // Output the measure
     ROS_INFO("Center distance : %g m", depths[centerIdx]);
+ 
+
 }
 
 void sizeCallback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& msg)
@@ -105,7 +108,7 @@ int main(int argc, char** argv) {
      */
     ros::Subscriber subDepth    = n.subscribe("/zed/zed_node/depth/depth_registered", 10, depthCallback);
     // ros::Subscriber size    = n.subscribe("/darknet_ros_msgs/bounding_boxes/", 10, sizeCallback);
-    ros::Subscriber size    = n.subscribe("/darknet_ros/bounding_boxes/", 10, sizeCallback);
+    // ros::Subscriber size    = n.subscribe("/darknet_ros/bounding_boxes/", 10, sizeCallback);
     /**
      * ros::spin() will enter a loop, pumping callbacks.  With this version, all
      * callbacks will be called from within this thread (the main one).  ros::spin()
