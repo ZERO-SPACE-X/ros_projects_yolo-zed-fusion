@@ -1,0 +1,8 @@
+prefix=/home/zero/catkin_ws/install
+
+Name: display_test
+Description: Description of display_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

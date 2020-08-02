@@ -1,0 +1,8 @@
+prefix=/home/zero/catkin_ws/install
+
+Name: display_distance
+Description: Description of display_distance
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

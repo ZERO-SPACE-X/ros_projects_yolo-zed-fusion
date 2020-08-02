@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/zero/catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+
+                "/home/zero/catkin_ws/src/darknet_ros/darknet_ros/include/**",
+                "/home/zero/catkin_ws/src/darknet_ros/darknet_ros/src/**",  
+
+                "/home/zero/catkin_ws/src/darknet_ros/darknet_ros_msgs/**", 
+
+                "/home/zero/catkin_ws/src/display_distance/src/**",  
+                "/home/zero/catkin_ws/src/display_distance/include/**", 
+
+                "/home/zero/catkin_ws/src/display_test/src/**",  
+
+                "/opt/ros/kinetic/include/ros/ros.h",
+                "/opt/ros/kinetic/include/sensor_msgs/Image.h",
+                
+                "/usr/include/**",
+                "/opt/ros/kinetic/include"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

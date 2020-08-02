@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="display_test" name="fuse_data" type="fuse_data"/>
+	<!-- <node pkg="zed_wrapper" name="talker1" type="talker"/> -->
+</launch>

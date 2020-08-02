@@ -1,0 +1,13 @@
+yolo_model:
+
+  config_file:
+    name: yolov3-tiny_obj.cfg
+  weight_file:
+    name: yolov3-tiny_obj_best.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - face
+      - face_mask
+
