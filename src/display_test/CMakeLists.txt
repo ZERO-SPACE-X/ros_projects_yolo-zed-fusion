@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(display_test)
-SET(CMAKE_BUILD_TYPE Debug)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   image_transport
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -55,7 +56,11 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message1.msg
 #   Message2.msg
 # )
-
+add_message_files(
+  FILES
+  Pub_class_distance.msg
+  # Message2.msg
+)
 ## Generate services in the 'srv' folder
 # add_service_files(
 #   FILES
@@ -75,7 +80,11 @@ find_package(catkin REQUIRED COMPONENTS
 #   DEPENDENCIES
 #   darknet_ros_msgs#   sensor_msgs#   std_msgs
 # )
-
+#generate_messages必须在catkin_package前面
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+ )
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################
@@ -108,7 +117,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES display_test
-#  CATKIN_DEPENDS darknet_ros_msgs roscpp rospy sensor_msgs std_msgs
+  CATKIN_DEPENDS darknet_ros_msgs roscpp rospy sensor_msgs std_msgs message_runtime
 #  DEPENDS system_lib
 )
 
@@ -159,6 +168,8 @@ target_link_libraries(dis_test ${catkin_LIBRARIES})
 add_executable(fuse_data src/fuse_data.cpp)
 target_link_libraries(fuse_data ${catkin_LIBRARIES})
 
+add_executable(publish_distance src/publish_distance.cpp)
+target_link_libraries(publish_distance ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############

@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(display_test_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/zero/catkin_ws/devel/include " STREQUAL " ")
   set(display_test_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/zero/catkin_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/zero/catkin_ws/devel/lib;/home/zero/ros_test/devel/lib;/home/zero/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/zero/catkin_ws/devel/lib;/home/zero/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(display_test_EXPORTED_TARGETS "")
+set(display_test_EXPORTED_TARGETS "display_test_generate_messages_cpp;display_test_generate_messages_eus;display_test_generate_messages_lisp;display_test_generate_messages_nodejs;display_test_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${display_test_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${display_test_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "darknet_ros_msgs;roscpp;rospy;sensor_msgs;std_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND display_test_EXPORTED_TARGETS ${${display_test_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "display_test-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${display_test_DIR}/${extra})

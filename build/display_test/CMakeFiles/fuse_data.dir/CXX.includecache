@@ -65,6 +65,26 @@ fstream
 -
 iostream
 -
+ros/ros.h
+-
+sensor_msgs/Image.h
+-
+message_filters/subscriber.h
+-
+message_filters/time_synchronizer.h
+-
+message_filters/sync_policies/approximate_time.h
+-
+boost/thread/thread.hpp
+-
+darknet_ros_msgs/BoundingBox.h
+-
+darknet_ros_msgs/BoundingBoxes.h
+-
+fstream
+-
+iostream
+-
 
 /opt/ros/kinetic/include/message_filters/connection.h
 boost/function.hpp

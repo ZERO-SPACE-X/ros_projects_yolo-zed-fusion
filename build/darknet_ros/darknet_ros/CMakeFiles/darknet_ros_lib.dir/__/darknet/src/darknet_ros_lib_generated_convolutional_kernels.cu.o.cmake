@@ -72,9 +72,9 @@ set(generated_cubin_file_internal "/home/zero/catkin_ws/build/darknet_ros/darkne
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda-10.0/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS -O3;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_50,code=[sm_50,compute_50];-gencode;arch=compute_52,code=[sm_52,compute_52];-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_62,code=sm_62 ;; ) # list
 # Build specific configuration flags
-set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_DEBUG  ; )
 set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
+set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;--std;c++11;-DROS_BUILD_SHARED_LIBS=1;-DROS_BUILD_SHARED_LIBS=1;-DDARKNET_FILE_PATH="/home/zero/catkin_ws/src/darknet_ros/darknet";-DGPU;-DROS_PACKAGE_NAME="darknet_ros";-DROSCONSOLE_BACKEND_LOG4CXX;-DOPENCV;-Ddarknet_ros_lib_EXPORTS) # list
 set(CUDA_NVCC_INCLUDE_ARGS "-I/usr/local/cuda-10.0/include;-I/usr/include;-I/opt/ros/kinetic/include/opencv-3.3.1-dev;-I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv;-I/home/zero/catkin_ws/src/darknet_ros/darknet/src;-I/home/zero/catkin_ws/src/darknet_ros/darknet/include;-I/home/zero/catkin_ws/src/darknet_ros/darknet_ros/include;-I/home/zero/catkin_ws/devel/include;-I/opt/ros/kinetic/include;-I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;-I/usr/local/cuda-10.0/include") # list (needs to be in quotes to handle spaces properly).
@@ -88,9 +88,9 @@ endif()
 # This is the list of host compilation flags.  It C or CXX should already have
 # been chosen by FindCUDA.cmake.
 set(CMAKE_HOST_FLAGS   -fPIC)
-set(CMAKE_HOST_FLAGS_RELEASE -O3 -DNDEBUG)
 set(CMAKE_HOST_FLAGS_DEBUG -g)
 set(CMAKE_HOST_FLAGS_MINSIZEREL -Os -DNDEBUG)
+set(CMAKE_HOST_FLAGS_RELEASE -O3 -DNDEBUG)
 set(CMAKE_HOST_FLAGS_RELWITHDEBINFO -O2 -g -DNDEBUG)
 
 # Take the compiler flags and package them up to be sent to the compiler via -Xcompiler

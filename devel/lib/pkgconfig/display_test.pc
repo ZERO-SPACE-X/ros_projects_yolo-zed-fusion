@@ -3,6 +3,6 @@ prefix=/home/zero/catkin_ws/devel
 Name: display_test
 Description: Description of display_test
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/zero/catkin_ws/devel/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: darknet_ros_msgs roscpp rospy sensor_msgs std_msgs message_runtime

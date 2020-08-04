@@ -1167,6 +1167,19 @@ _run_tests_darknet_ros/fast:
 .PHONY : _run_tests_darknet_ros/fast
 
 #=============================================================================
+# Target rules for targets named fuse_data
+
+# Build rule for target.
+fuse_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fuse_data
+.PHONY : fuse_data
+
+# fast build rule for target.
+fuse_data/fast:
+	$(MAKE) -f display_test/CMakeFiles/fuse_data.dir/build.make display_test/CMakeFiles/fuse_data.dir/build
+.PHONY : fuse_data/fast
+
+#=============================================================================
 # Target rules for targets named dis_test
 
 # Build rule for target.
@@ -1180,17 +1193,173 @@ dis_test/fast:
 .PHONY : dis_test/fast
 
 #=============================================================================
-# Target rules for targets named fuse_data
+# Target rules for targets named publish_distance
 
 # Build rule for target.
-fuse_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fuse_data
-.PHONY : fuse_data
+publish_distance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publish_distance
+.PHONY : publish_distance
 
 # fast build rule for target.
-fuse_data/fast:
-	$(MAKE) -f display_test/CMakeFiles/fuse_data.dir/build.make display_test/CMakeFiles/fuse_data.dir/build
-.PHONY : fuse_data/fast
+publish_distance/fast:
+	$(MAKE) -f display_test/CMakeFiles/publish_distance.dir/build.make display_test/CMakeFiles/publish_distance.dir/build
+.PHONY : publish_distance/fast
+
+#=============================================================================
+# Target rules for targets named display_test_genpy
+
+# Build rule for target.
+display_test_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_genpy
+.PHONY : display_test_genpy
+
+# fast build rule for target.
+display_test_genpy/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_genpy.dir/build.make display_test/CMakeFiles/display_test_genpy.dir/build
+.PHONY : display_test_genpy/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages_py
+
+# Build rule for target.
+display_test_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages_py
+.PHONY : display_test_generate_messages_py
+
+# fast build rule for target.
+display_test_generate_messages_py/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages_py.dir/build.make display_test/CMakeFiles/display_test_generate_messages_py.dir/build
+.PHONY : display_test_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named display_test_gencpp
+
+# Build rule for target.
+display_test_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_gencpp
+.PHONY : display_test_gencpp
+
+# fast build rule for target.
+display_test_gencpp/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_gencpp.dir/build.make display_test/CMakeFiles/display_test_gencpp.dir/build
+.PHONY : display_test_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages_cpp
+
+# Build rule for target.
+display_test_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages_cpp
+.PHONY : display_test_generate_messages_cpp
+
+# fast build rule for target.
+display_test_generate_messages_cpp/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages_cpp.dir/build.make display_test/CMakeFiles/display_test_generate_messages_cpp.dir/build
+.PHONY : display_test_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _display_test_generate_messages_check_deps_Pub_class_distance
+
+# Build rule for target.
+_display_test_generate_messages_check_deps_Pub_class_distance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _display_test_generate_messages_check_deps_Pub_class_distance
+.PHONY : _display_test_generate_messages_check_deps_Pub_class_distance
+
+# fast build rule for target.
+_display_test_generate_messages_check_deps_Pub_class_distance/fast:
+	$(MAKE) -f display_test/CMakeFiles/_display_test_generate_messages_check_deps_Pub_class_distance.dir/build.make display_test/CMakeFiles/_display_test_generate_messages_check_deps_Pub_class_distance.dir/build
+.PHONY : _display_test_generate_messages_check_deps_Pub_class_distance/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages_lisp
+
+# Build rule for target.
+display_test_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages_lisp
+.PHONY : display_test_generate_messages_lisp
+
+# fast build rule for target.
+display_test_generate_messages_lisp/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages_lisp.dir/build.make display_test/CMakeFiles/display_test_generate_messages_lisp.dir/build
+.PHONY : display_test_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages
+
+# Build rule for target.
+display_test_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages
+.PHONY : display_test_generate_messages
+
+# fast build rule for target.
+display_test_generate_messages/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages.dir/build.make display_test/CMakeFiles/display_test_generate_messages.dir/build
+.PHONY : display_test_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages_eus
+
+# Build rule for target.
+display_test_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages_eus
+.PHONY : display_test_generate_messages_eus
+
+# fast build rule for target.
+display_test_generate_messages_eus/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages_eus.dir/build.make display_test/CMakeFiles/display_test_generate_messages_eus.dir/build
+.PHONY : display_test_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named display_test_generate_messages_nodejs
+
+# Build rule for target.
+display_test_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_generate_messages_nodejs
+.PHONY : display_test_generate_messages_nodejs
+
+# fast build rule for target.
+display_test_generate_messages_nodejs/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_generate_messages_nodejs.dir/build.make display_test/CMakeFiles/display_test_generate_messages_nodejs.dir/build
+.PHONY : display_test_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named display_test_geneus
+
+# Build rule for target.
+display_test_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_geneus
+.PHONY : display_test_geneus
+
+# fast build rule for target.
+display_test_geneus/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_geneus.dir/build.make display_test/CMakeFiles/display_test_geneus.dir/build
+.PHONY : display_test_geneus/fast
+
+#=============================================================================
+# Target rules for targets named display_test_genlisp
+
+# Build rule for target.
+display_test_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_genlisp
+.PHONY : display_test_genlisp
+
+# fast build rule for target.
+display_test_genlisp/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_genlisp.dir/build.make display_test/CMakeFiles/display_test_genlisp.dir/build
+.PHONY : display_test_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named display_test_gennodejs
+
+# Build rule for target.
+display_test_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_test_gennodejs
+.PHONY : display_test_gennodejs
+
+# fast build rule for target.
+display_test_gennodejs/fast:
+	$(MAKE) -f display_test/CMakeFiles/display_test_gennodejs.dir/build.make display_test/CMakeFiles/display_test_gennodejs.dir/build
+.PHONY : display_test_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named sort_track_generate_messages_cpp
@@ -2335,8 +2504,21 @@ help:
 	@echo "... darknet_ros_lib"
 	@echo "... run_tests_darknet_ros"
 	@echo "... _run_tests_darknet_ros"
-	@echo "... dis_test"
 	@echo "... fuse_data"
+	@echo "... dis_test"
+	@echo "... publish_distance"
+	@echo "... display_test_genpy"
+	@echo "... display_test_generate_messages_py"
+	@echo "... display_test_gencpp"
+	@echo "... display_test_generate_messages_cpp"
+	@echo "... _display_test_generate_messages_check_deps_Pub_class_distance"
+	@echo "... display_test_generate_messages_lisp"
+	@echo "... display_test_generate_messages"
+	@echo "... display_test_generate_messages_eus"
+	@echo "... display_test_generate_messages_nodejs"
+	@echo "... display_test_geneus"
+	@echo "... display_test_genlisp"
+	@echo "... display_test_gennodejs"
 	@echo "... sort_track_generate_messages_cpp"
 	@echo "... sort_track_gencpp"
 	@echo "... _sort_track_generate_messages_check_deps_IntList"
