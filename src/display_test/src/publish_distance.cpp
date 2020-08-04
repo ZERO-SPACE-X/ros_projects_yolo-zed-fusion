@@ -113,7 +113,7 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
         distance_msg.id.push_back(detect_msg->bounding_boxes[i].id);
         distance_msg.x_center.push_back(u[i]);
         distance_msg.y_center.push_back(u[i]);
-        distance_msg.distance.push_back(depths[centerIdx[i]]);
+        // distance_msg.distance.push_back(depths[centerIdx[i]]);
         
         
     }
