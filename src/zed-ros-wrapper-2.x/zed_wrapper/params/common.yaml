@@ -9,12 +9,12 @@ gain:                       100                                 # Dynamic
 confidence:                 100                                 # Dynamic
 mat_resize_factor:          1.0                                 # Dynamic
 point_cloud_freq:           10.0                                # Dynamic - frequency of the pointcloud publishing (equal or less to `frame_rate` value)
-
+# 用resolution测试了一下由2改成了3，然后发现视频的大小变了，确认更改这个里面的参数会改变zed的默认参数设置
 general:
     camera_flip:                false
     zed_id:                     -1
     serial_number:              0
-    resolution:                 2                                   # '0': HD2K, '1': HD1080, '2': HD720, '3': VGA
+    resolution:                 2      # modify by liugang@20200805 # '0': HD2K, '1': HD1080, '2': HD720, '3': VGA
     frame_rate:                 30
     gpu_id:                     -1
     base_frame:                 'base_link'                         # must be equal to the frame_id used in the URDF file
@@ -35,7 +35,8 @@ video:
     color_enhancement:          true                                # [FUTURE USE] This parameter enhances color spreading on R/G/B channel and increase gamma correction on black areas for a better gray segmentation in black areas. Recommended for computer's vision applications.
 
 depth:
-    quality:                    1                                   # '0': NONE, '1': PERFORMANCE, '2': MEDIUM, '3': QUALITY, '4': ULTRA
+#   quality:                    1
+    quality:                    4   # modify by liugang@20200805    # '0': NONE, '1': PERFORMANCE, '2': MEDIUM, '3': QUALITY, '4': ULTRA
     sensing_mode:               0                                   # '0': STANDARD, '1': FILL
     depth_stabilization:        1                                   # `0`: disabled, `1`: enabled
     openni_depth_mode:          0                                   # '0': 32bit float meters, '1': 16bit uchar millimeters

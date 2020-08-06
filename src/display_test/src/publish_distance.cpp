@@ -35,10 +35,12 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
     int u[class_num] = {};
     int v[class_num] = {};
     int centerIdx[class_num] = {};
-    #ifdef DEBUG
+    #ifdef DEBUG  //只要定义了DEBUG这个宏，下面这段代码就会执行
         int temp1[class_num] ={};
         int temp2[class_num] ={};
         int temp3;
+        int temp4;
+        int temp5;
     #endif
     int sizes = msg->data.size();
 
@@ -51,6 +53,10 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
     if (DEBUG)
     {
         temp3 = msg->width;
+        temp4 = msg->height;
+        temp5 = msg->step;
+        std::cout << "height:"<<temp4<<std::endl;   // heigth = 720
+        std::cout << "step:"<<temp5<<std::endl;     // step = 5120
     }
     
     
@@ -71,8 +77,24 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
         {
             centerIdx[i] = 0;
         }
-        else if (centerIdx[i] > sizes /4)
+        else if (centerIdx[i] > sizes /4) //因为在定义data的时候就已经将总像素点个数*4个字节了,depth是指针变量，一次移动4个字节，所以是data大小的1/4。
         {
+            // image.h 中的说明
+            // uint32 height         # image height, that is, number of rows\n\
+            // uint32 width          # image width, that is, number of columns\n\
+            // \n\
+            // # The legal values for encoding are in file src/image_encodings.cpp\n\
+            // # If you want to standardize a new string format, join\n\
+            // # ros-users@lists.sourceforge.net and send an email proposing a new encoding.\n\
+            // \n\
+            // string encoding       # Encoding of pixels -- channel meaning, ordering, size\n\
+            //                     # taken from the list of strings in include/sensor_msgs/image_encodings.h\n\
+            // \n\
+            // uint8 is_bigendian    # is this data bigendian?\n\
+            // uint32 step           # Full row length in bytes\n\
+            // uint8[] data          # actual matrix data, size is (step * rows)\n
+
+            // 本工程用的图片大小为1280*720，所以总的depths大小为：1280*4*720=3686400，但是不知道为什么获取位置大于950000就提示核心转储
             centerIdx[i] = sizes /4;
         }
     }
@@ -112,8 +134,8 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
         distance_msg.classes.push_back(detect_msg->bounding_boxes[i].Class);
         distance_msg.id.push_back(detect_msg->bounding_boxes[i].id);
         distance_msg.x_center.push_back(u[i]);
-        distance_msg.y_center.push_back(u[i]);
-        // distance_msg.distance.push_back(depths[centerIdx[i]]);
+        distance_msg.y_center.push_back(v[i]);
+        distance_msg.distance.push_back(depths[centerIdx[i]]);
         
         
     }
@@ -126,6 +148,13 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
     // distance_msg.classes.clear();   
     // distance_msg.distance.clear();  
     std::cout << "\033[2J\033[1;1H";     // clear terminal
+    /*
+    These are ANSI escape codes. The first one (\033[2J) clears the entire screen (J) from top to bottom (2). 
+    The second code (\033[1;1H) positions the cursor at row 1, column 1.
+    All ANSI escapes begin with the sequence ESC[, have zero or more parameters delimited by ;, 
+    and end with a command letter (J and H in your case). \033 is the C-style octal sequence for the escape 
+    character.
+    */
     
 }
 

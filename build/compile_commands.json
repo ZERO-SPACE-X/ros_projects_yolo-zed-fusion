@@ -385,6 +385,11 @@
   "file": "/home/zero/catkin_ws/src/display_test/src/publish_distance.cpp"
 },
 {
+  "directory": "/home/zero/catkin_ws/build/move_turtle",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"move_turtle\\\" -I/home/zero/catkin_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/control_turtle.dir/src/control_turtle.cpp.o -c /home/zero/catkin_ws/src/move_turtle/src/control_turtle.cpp",
+  "file": "/home/zero/catkin_ws/src/move_turtle/src/control_turtle.cpp"
+},
+{
   "directory": "/home/zero/catkin_ws/build/zed-ros-wrapper-2.x/tutorials/zed_depth_sub_tutorial",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"zed_depth_sub_tutorial\\\" -I/home/zero/catkin_ws/src/zed-ros-wrapper-2.x/tutorials/zed_depth_sub_tutorial/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/zed_depth_sub.dir/src/zed_depth_sub_tutorial.cpp.o -c /home/zero/catkin_ws/src/zed-ros-wrapper-2.x/tutorials/zed_depth_sub_tutorial/src/zed_depth_sub_tutorial.cpp",
   "file": "/home/zero/catkin_ws/src/zed-ros-wrapper-2.x/tutorials/zed_depth_sub_tutorial/src/zed_depth_sub_tutorial.cpp"

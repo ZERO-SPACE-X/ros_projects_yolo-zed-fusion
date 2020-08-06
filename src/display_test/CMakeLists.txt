@@ -170,6 +170,8 @@ target_link_libraries(fuse_data ${catkin_LIBRARIES})
 
 add_executable(publish_distance src/publish_distance.cpp)
 target_link_libraries(publish_distance ${catkin_LIBRARIES})
+
+
 #############
 ## Install ##
 #############

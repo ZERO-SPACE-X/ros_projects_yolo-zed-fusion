@@ -91,7 +91,7 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
         {
             centerIdx[i] = 0;
         }
-        else if (centerIdx[i] > sizes /4)
+        else if (centerIdx[i] > sizes /4) 
         {
             centerIdx[i] = sizes /4;
         }
@@ -128,33 +128,36 @@ void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg,
     
 }
 
-
+#ifdef XXX
 // // 测试深度信息数组最大的范围是多少，方式超出数组范围，报核心转储的错误
+int u[6] = {921601,921600,921000,821000,721000,621000};
 // // int u[11] = {950000,850000,750000,650000,550000,450000,350000,250000,150000,35000,100000};
 // int u[11] = {950000,850000,750000,650000,550000,450000,350000,250000,150000,35000,100000};
-// void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg, const sensor_msgs::Image::ConstPtr& msg)
-// {
-//     int sizes = msg->data.size();
-//     // Get a pointer to the depth values casting the data
-//     // pointer to floating point
-//     float* depths = (float*)(&msg->data[0]);
+void depth_callback(const darknet_ros_msgs::BoundingBoxes::ConstPtr& detect_msg, const sensor_msgs::Image::ConstPtr& msg)
+{
+    int sizes = msg->data.size();
+    // Get a pointer to the depth values casting the data
+    // pointer to floating point
+    float* depths = (float*)(&msg->data[0]);
 
-//     // Image coordinates of the center pixel
-//     // int u = msg->width / 2;
-//     // int v = msg->height / 2;
+    // Image coordinates of the center pixel
+    // int u = msg->width / 2;
+    // int v = msg->height / 2;
 
-//     // Linear index of the center pixel
-//     // int centerIdx = u + msg->width * v;
-//     for (char i = 0; i < 11; i++)
-//     {
-//         // Output the measure
-//         //  ROS_INFO("Center distance : %g m", depths[u[i]]);
-//         std::cout<<"Center distance :  " << depths[u[i]] << "  m" << std::endl;
-//     }
-//     std::cout << sizes << std::endl;
-//     std::cout << "\033[2J\033[1;1H";     // clear terminal
-// }
+    // Linear index of the center pixel
+    // int centerIdx = u + msg->width * v;
+    for (char i = 0; i < 6; i++)
+    {
+        // Output the measure
+        //  ROS_INFO("Center distance : %g m", depths[u[i]]);
+        std::cout<<"Center distance :  " << depths[u[i]] << "  m" << std::endl;
+    }
 
+
+    std::cout << sizes << std::endl;
+    std::cout << "\033[2J\033[1;1H";     // clear terminal
+}
+#endif
 
 // void depthCallback(const sensor_msgs::Image::ConstPtr& msg) {
 

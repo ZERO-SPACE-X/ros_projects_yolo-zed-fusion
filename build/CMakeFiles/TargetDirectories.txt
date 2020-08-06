@@ -139,6 +139,14 @@
 /home/zero/catkin_ws/build/display_test/CMakeFiles/display_test_genlisp.dir
 /home/zero/catkin_ws/build/display_test/CMakeFiles/test.dir
 /home/zero/catkin_ws/build/display_test/CMakeFiles/display_test_gennodejs.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/list_install_components.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/install.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/edit_cache.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/rebuild_cache.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/control_turtle.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/install/local.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/install/strip.dir
+/home/zero/catkin_ws/build/move_turtle/CMakeFiles/test.dir
 /home/zero/catkin_ws/build/sort-deepsort-yolov3-ROS/sort_track/CMakeFiles/install.dir
 /home/zero/catkin_ws/build/sort-deepsort-yolov3-ROS/sort_track/CMakeFiles/rebuild_cache.dir
 /home/zero/catkin_ws/build/sort-deepsort-yolov3-ROS/sort_track/CMakeFiles/install/local.dir

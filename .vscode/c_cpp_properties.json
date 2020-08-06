@@ -19,6 +19,8 @@
 
                 "/home/zero/catkin_ws/src/display_test/src/**",  
 
+                "/home/zero/catkin_ws/src/move_turtle/src/**", 
+
                 "/opt/ros/kinetic/include/ros/ros.h",
                 "/opt/ros/kinetic/include/sensor_msgs/Image.h",
                 

@@ -732,6 +732,9 @@ display_distance_SOURCE_DIR:STATIC=/home/zero/catkin_ws/src/display_distance
 //Value Computed by CMake
 display_test_BINARY_DIR:STATIC=/home/zero/catkin_ws/build/display_test
 
+//The directory containing a CMake configuration file for display_test.
+display_test_DIR:PATH=/home/zero/catkin_ws/devel/share/display_test/cmake
+
 //Value Computed by CMake
 display_test_SOURCE_DIR:STATIC=/home/zero/catkin_ws/src/display_test
 
@@ -813,6 +816,12 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//Value Computed by CMake
+move_turtle_BINARY_DIR:STATIC=/home/zero/catkin_ws/build/move_turtle
+
+//Value Computed by CMake
+move_turtle_SOURCE_DIR:STATIC=/home/zero/catkin_ws/src/move_turtle
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
@@ -1121,7 +1130,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

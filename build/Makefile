@@ -1362,6 +1362,19 @@ display_test_gennodejs/fast:
 .PHONY : display_test_gennodejs/fast
 
 #=============================================================================
+# Target rules for targets named control_turtle
+
+# Build rule for target.
+control_turtle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_turtle
+.PHONY : control_turtle
+
+# fast build rule for target.
+control_turtle/fast:
+	$(MAKE) -f move_turtle/CMakeFiles/control_turtle.dir/build.make move_turtle/CMakeFiles/control_turtle.dir/build
+.PHONY : control_turtle/fast
+
+#=============================================================================
 # Target rules for targets named sort_track_generate_messages_cpp
 
 # Build rule for target.
@@ -2519,6 +2532,7 @@ help:
 	@echo "... display_test_geneus"
 	@echo "... display_test_genlisp"
 	@echo "... display_test_gennodejs"
+	@echo "... control_turtle"
 	@echo "... sort_track_generate_messages_cpp"
 	@echo "... sort_track_gencpp"
 	@echo "... _sort_track_generate_messages_check_deps_IntList"

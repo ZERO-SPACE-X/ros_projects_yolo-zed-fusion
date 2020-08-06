@@ -62,6 +62,8 @@
         "typeinfo": "cpp",
         "random": "cpp",
         "iterator": "cpp",
-        "string": "cpp"
-    }
+        "string": "cpp",
+        "*.cuh": "cpp"
+    },
+    "cmake.configureOnOpen": false
 }
